@@ -110,7 +110,7 @@
     },
     {
         "subname": "Projection Setup",
-        "description": "Helper controls for quickly populating the projection fields above. Selecting a TileMatrixSet does not change the mission projection by itself; use the action buttons below to load or apply settings.",
+        "subdescription": "Helper controls for quickly populating the projection fields above. Selecting a TileMatrixSet does not change the mission projection by itself; use the action buttons below to load or apply settings.",
         "components": [
           {
             "field": "projection.tilematrixset",
