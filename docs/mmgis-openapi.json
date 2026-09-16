@@ -256,7 +256,15 @@
                     "type": "boolean"
                   }
                 },
-                "required": ["mission"]
+                "required": ["mission"],
+                "anyOf": [
+                  {
+                    "required": ["config"]
+                  },
+                  {
+                    "required": ["version"]
+                  }
+                ]
               }
             }
           }

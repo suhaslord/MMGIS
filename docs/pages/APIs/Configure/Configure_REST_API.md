@@ -117,11 +117,13 @@ Validates a configuration object and performs no other action.
 
 Sets a mission's configuration object. Only complete configuration objects are acceptable and it must pass the internal validation of this endpoint to successfully be upserted. _If an easier-to-use method is desired for updated a mission's configuration object, see the other endpoints below._
 
+At least one of `config` or `version` must be provided. `config` and `version` are individually optional, but a request that omits both is invalid.
+
 |  Parameter  |   Type   | Required | Default |                        Description                        |
 | :---------: | :------: | :------: | :-----: | :-------------------------------------------------------: |
 | **mission** | _string_ |   true   |   N/A   |                       Mission name                        |
-| **config**  | _object_ |  false   |   N/A   |                 Full configuration object                 |
-| **version** | _number_ |  false   |   N/A   | Set a configuration version number to rollback to instead |
+| **config**  | _object_ |  false   |   N/A   | Full configuration object. Required when `version` is omitted. |
+| **version** | _number_ |  false   |   N/A   | Configuration version to roll back to. Required when `config` is omitted. |
 
 #### Example
 
